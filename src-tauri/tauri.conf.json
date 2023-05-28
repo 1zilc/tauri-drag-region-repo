@@ -1,0 +1,96 @@
+{
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "beforeBuildCommand": "pnpm build",
+    "devPath": "https://localhost:1420",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "Tauri",
+    "version": "0.9.3"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": true,
+      "app": {
+        "all": true
+      },
+      "fs": {
+        "all": true,
+        "scope": ["**"]
+      },
+      "shell": {
+        "all": true
+      },
+      "path": {
+        "all": true
+      },
+      "dialog": {
+        "all": true
+      },
+      "http": {
+        "all": true,
+        "scope": ["https://**", "http://**"]
+      },
+      "process": {
+        "all": true
+      },
+      "clipboard": {
+        "all": true,
+        "writeText": true,
+        "readText": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "category": "DeveloperTool",
+      "copyright": "Copyright © 2022 1zilc",
+      "deb": {
+        "depends": []
+      },
+      "externalBin": [],
+      "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.icns", "icons/icon.ico"],
+      "identifier": "com.1zilc.tauri",
+      "longDescription": "A Xray-Core GUI client on MacOS based on tauri",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null,
+        "minimumSystemVersion": "11.0"
+      },
+      "resources": [],
+      "shortDescription": "A Xray-Core GUI client on MacOS based on tauri",
+      "targets": "dmg",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": false
+    },
+    "macOSPrivateApi": true,
+    "windows": [
+      {
+        "fullscreen": false,
+        "resizable": true,
+        "transparent": true,
+        "title": "tauri",
+        "height": 600,
+        "width": 600,
+        "minHeight": 600,
+        "minWidth": 480,
+        "titleBarStyle": "Overlay",
+        "hiddenTitle": true,
+        "visible": false,
+        "shadow": true
+      }
+    ]
+  }
+}
